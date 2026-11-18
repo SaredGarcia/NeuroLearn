@@ -550,46 +550,65 @@ body.modal-open{overflow:hidden}
 /* PIE DE REVISIÓN */
 
 
+
 /* =========================================
-   AJUSTE RESPONSIVE DEL LOGO GAPE
+   CORRECCIÓN FORZADA LOGO GAPE EN MÓVILES
 ========================================= */
 
-.footer-gape {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    min-width: 0;
+.footer .footer-inner .footer-credit .footer-gape {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    width: auto !important;
+    max-width: 100% !important;
 }
 
-.footer-gape-logo {
-    display: block;
-    width: 38px;
-    height: 38px;
-    max-width: 38px;
-    max-height: 38px;
-    object-fit: contain;
-    flex-shrink: 0;
-    background: transparent;
+.footer .footer-inner .footer-credit .footer-gape-logo {
+    display: block !important;
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+    max-width: 28px !important;
+    max-height: 28px !important;
+    object-fit: contain !important;
+    flex: 0 0 28px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
 }
 
-/* TABLET */
-@media (max-width: 768px) {
-    .footer-gape-logo {
-        width: 32px;
-        height: 32px;
-        max-width: 32px;
-        max-height: 32px;
+@media (max-width: 600px) {
+    .footer .footer-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+    }
+
+    .footer .footer-inner .footer-credit {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    .footer .footer-inner .footer-credit .footer-gape-logo {
+        width: 24px !important;
+        height: 24px !important;
+        min-width: 24px !important;
+        min-height: 24px !important;
+        max-width: 24px !important;
+        max-height: 24px !important;
+        flex-basis: 24px !important;
+    }
+
+    .footer .footer-gape span {
+        font-size: 10px !important;
     }
 }
 
-/* CELULAR */
-@media (max-width: 600px) {
-    .footer-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 12px;
     }
 
     .footer-credit {
